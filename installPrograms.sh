@@ -43,3 +43,8 @@ udo apt-get install qgis
 # install Mendeley
 sudo apt-get update
 sudo apt-get install mendeleydesktop
+
+# Dropbox
+sudo apt-get update
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
