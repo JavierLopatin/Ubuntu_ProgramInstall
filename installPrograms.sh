@@ -48,3 +48,7 @@ sudo apt-get install mendeleydesktop
 sudo apt-get update
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
+
+# Inkscape
+sudo apt-get update
+sudo apt-get install inkscape
