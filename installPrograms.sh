@@ -20,6 +20,7 @@ conda install -c anaconda scikit-learn -y
 conda install -c anaconda scikit-image -y
 conda install -c conda-forge gdal -y
 conda install -c conda-forge rasterio -y
+conda install -c conda-forge rasterstats -y
 conda install -c conda-forge rsgislib -y
 conda install -c conda-forge tuiview -y
 conda install -c ioos geopandas -y
