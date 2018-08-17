@@ -10,7 +10,6 @@ sudo apt-get upgrade
 bash Miniconda3-latest-Linux-x86_64.sh
 
 # install python libraries
-conda update --all -y
 conda install -c anaconda spyder -y
 conda install -c anaconda jupyter -y
 conda install -c anaconda numpy -y
@@ -21,9 +20,13 @@ conda install -c anaconda scikit-image -y
 conda install -c conda-forge gdal -y
 conda install -c conda-forge rasterio -y
 conda install -c conda-forge rasterstats -y
+conda install -c rbacher pysptools -y
+conda install -c conda-forge pyshp -y
+conda install -c ioos geopandas -y
 conda install -c conda-forge rsgislib -y
 conda install -c conda-forge tuiview -y
-conda install -c ioos geopandas -y
+conda install -c conda-forge tqdm -y
+conda update --all -y
 
 # install R and RStudio
 conda install -c r r-base -y
