@@ -10,11 +10,12 @@ sudo apt-get upgrade
 bash Miniconda3-latest-Linux-x86_64.sh
 
 # install python libraries
+conda config --add channels conda-forge
 conda install -c anaconda spyder jupyter numpy scipy pandas scikit-learn scikit-image -y
 conda install -c conda-forge gdal rasterio rasterstats pyshp rsgislib tuiview tqdm -y
 conda install -c rbacher pysptools -y
 conda install -c ioos geopandas -y
-conda update --all -y
+conda update --all -c conda-forge -y
 
 pip install sentinelhub --upgrade
 
