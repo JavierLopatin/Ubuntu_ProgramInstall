@@ -23,6 +23,13 @@ pip install sentinelhub --upgrade
 conda install -c r r-base -y
 conda install -c r rstudio -y
 
+# R packages
+conda install -c r r-raster -y
+conda install -c conda-forge r-rgdal -y
+conda install -c conda-forge r-vegan -y
+conda install -c r r-mass -y
+
+
 # install Java and dependencies to run MaxEnt in R
 sudo apt-get update 
 sudo apt-get install default-jdk -y
@@ -67,5 +74,4 @@ sed -i '0,/Cummulative max/{s/Cummulative max/Cummulative max 2/}' ~/.atom/packa
 # them on your system.
 python3 -m ipykernel install --user
 Rscript -e 'IRkernel::installspec()'
-
 
