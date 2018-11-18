@@ -43,3 +43,29 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 # Inkscape
 sudo apt-get update
 sudo apt-get install inkscape -y
+
+# install Atom and their dependencies tu run R and Python
+# install Atom
+wget https://atom.io/download/rpm -O atom.rpm
+# install require packages:
+conda install ipython ipykernel python-language-server
+sudo dnf -y install atom.rpm
+# install as many r packages as possible through conda
+conda install r-essentials r-igraph
+# install the R language server used later on
+Rscript -e 'install.packages("languageserver")'
+# install hydrogen and terminal
+apm install hydrogen hydrogen-launcher platformio-ide-terminal
+# install language/IDE plugins
+apm install atom-ide-ui ide-python ide-r language-r
+# The language-r extension appears to be fairly new, and requires a bit of patching to avoid an error message on startup (does nothing, but still…). 
+# If your curious what’s going on here, there are two duplicate snippets with the same name (which makes Atom complain), so we are renaming the duplicates.
+sed -i '0,/Grep/{s/Grep/Grep 2/}' ~/.atom/packages/language-r/snippets/language-r.cson
+sed -i '0,/Cummulative max/{s/Cummulative max/Cummulative max 2/}' ~/.atom/packages/language-r/snippets/language-r.cson
+# We’ll now need to install our R and Python kernels so that Hydrogen knows about them. 
+# You may need to supply the path to Minconda’s python3/Rscript binaries explicitly if you have other copies of 
+# them on your system.
+python3 -m ipykernel install --user
+Rscript -e 'IRkernel::installspec()'
+
+
