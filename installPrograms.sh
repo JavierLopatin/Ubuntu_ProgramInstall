@@ -1,4 +1,4 @@
-# intall programs in Ubunto-based OS
+# intall programs in Ubunto-based OS (18.04 >)
 # first, download miniconda3 to Downloads from https://conda.io/miniconda.html
 # run from Downloads
 
@@ -23,21 +23,17 @@ pip install sentinelhub --upgrade
 conda install -c r r-base -y
 conda install -c r rstudio -y
 
-# install Java and dependencies to run MaxEnt in 
+# install Java and dependencies to run MaxEnt in R
 sudo apt-get update 
 sudo apt-get install default-jdk -y
 R CMD javareconf
 sudo apt-get install r-cran-rjava -y
-sudo apt-get install libgdal1-dev libproj-dev -y
+sudo apt-get install libgdal-dev libproj-dev -y
 
 # install QGIS
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
-udo apt-get install qgis
-
-# install Mendeley
-sudo apt-get update
-sudo apt-get install mendeleydesktop
+sudo apt-get install qgis -y
 
 # Dropbox
 sudo apt-get update
@@ -46,4 +42,4 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 # Inkscape
 sudo apt-get update
-sudo apt-get install inkscape
+sudo apt-get install inkscape -y
