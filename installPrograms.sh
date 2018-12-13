@@ -24,6 +24,10 @@ conda install -c r r-base -y
 conda install -c r rstudio -y
 
 # R packages
+# install as many r packages as possible through conda
+conda install r-essentials r-igraph
+# install the R language server used later on
+Rscript -e 'install.packages("languageserver")'
 conda install -c r r-raster -y
 conda install -c conda-forge r-rgdal -y
 conda install -c conda-forge r-vegan -y
@@ -57,10 +61,6 @@ wget https://atom.io/download/rpm -O atom.rpm
 # install require packages:
 conda install ipython ipykernel python-language-server
 sudo dnf -y install atom.rpm
-# install as many r packages as possible through conda
-conda install r-essentials r-igraph
-# install the R language server used later on
-Rscript -e 'install.packages("languageserver")'
 # install hydrogen and terminal
 apm install hydrogen hydrogen-launcher platformio-ide-terminal
 # install language/IDE plugins
