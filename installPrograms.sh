@@ -20,6 +20,7 @@ conda update --all -c conda-forge -y
 pip install sentinelhub --upgrade
 
 # install R and RStudio
+conda install -c conda-forge libiconv
 conda install -c r r-base -y
 conda install -c r rstudio -y
 
