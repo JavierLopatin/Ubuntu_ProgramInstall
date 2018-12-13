@@ -26,7 +26,7 @@ conda install -c r rstudio -y
 
 # R packages
 # install as many r packages as possible through conda
-conda install r-essentials r-igraph
+conda install r-essentials r-igraph r-maptools -y
 # install the R language server used later on
 Rscript -e 'install.packages("languageserver")'
 conda install -c r r-raster -y
