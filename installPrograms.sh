@@ -42,11 +42,6 @@ R CMD javareconf
 sudo apt-get install r-cran-rjava -y
 sudo apt-get install libgdal-dev libproj-dev -y
 
-# install QGIS
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-sudo apt-get update
-sudo apt-get install qgis -y
-
 # Dropbox
 sudo apt-get update
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
@@ -75,4 +70,8 @@ sed -i '0,/Cummulative max/{s/Cummulative max/Cummulative max 2/}' ~/.atom/packa
 # them on your system.
 python3 -m ipykernel install --user
 Rscript -e 'IRkernel::installspec()'
+
+# change apereance of terminal
+
+
 
